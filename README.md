@@ -67,6 +67,6 @@ Each behavioral group is modeled independently using Random Forest classifiers t
 
 **Miruna Suliman**  
 Email: [miruna.suliman@yahoo.com](mailto:miruna.suliman@yahoo.com)  
-GitHub: [@msuliman](https://github.com/msuliman)
+GitHub: [@MirunaSuliman](https://github.com/MirunaSuliman)
 
 ---
