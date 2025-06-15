@@ -4,6 +4,7 @@ import os
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
 from sklearn.cluster import KMeans
+from sklearn.metrics import silhouette_score, davies_bouldin_score
 from scipy.cluster.hierarchy import dendrogram, linkage, cophenet
 from scipy.spatial.distance import pdist
 import matplotlib.pyplot as plt
@@ -50,6 +51,13 @@ def cluster_driver_behavior(input_csv='./output/f1_data_final_clean.csv'):
     clusters = kmeans.fit_predict(X_pca)
     qualifying_data = qualifying_data.reset_index(drop=True)
     qualifying_data['Cluster'] = clusters
+
+    # Validation metrics 
+    silhouette = silhouette_score(X_pca, clusters)
+    db_index = davies_bouldin_score(X_pca, clusters)
+    print("\n=== Clustering Validation Metrics ===")
+    print(f"Silhouette Score: {silhouette:.4f}")
+    print(f"Davies-Bouldin Index: {db_index:.4f}")
 
     # 6. Validation via hierarchical clustering
     Z = linkage(X_pca, method='ward')
