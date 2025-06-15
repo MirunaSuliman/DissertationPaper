@@ -2,7 +2,7 @@ import pandas as pd
 from sklearn.linear_model import LinearRegression
 
 # Load dataset
-df = pd.read_csv('output/modeling/results/f1_race_level_data.csv')
+df = pd.read_csv('output/modeling/f1_race_level_data.csv')
 
 # Define features and target
 features = ['LapTime_AvgPace', 'LapTime_PaceConsistency', 'LapTime_PeakPace', 'SectorBalance']

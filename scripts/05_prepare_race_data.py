@@ -15,7 +15,7 @@ def calculate_sector_balance(row):
 
 def create_race_level_dataset(cleaned_data_path='./output/f1_data_final_clean.csv',
                               clusters_path='./output/clustering/results/f1_data_with_clusters.csv',
-                              output_path='./output/modeling/results/f1_race_level_data.csv'):
+                              output_path='./output/f1_race_level_data.csv'):
     target_variable = 'PointsFinish'
 
     # Load and preprocess data

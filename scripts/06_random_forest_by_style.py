@@ -8,13 +8,13 @@ from sklearn.preprocessing import StandardScaler
 import numpy as np
 import os
 
-def run_random_forest_by_style(data_path='output/modeling/results/f1_race_level_data.csv', target='PointsFinish'):
+def run_random_forest_by_style(data_path='output/f1_race_level_data.csv', target='PointsFinish'):
     df = pd.read_csv(data_path)
     features = ['LapTime_AvgPace', 'LapTime_PaceConsistency', 'LapTime_PeakPace', 'SectorBalance']
 
     # Ensure output directories exist
-    figures_dir = 'output/modeling/figures'
-    results_dir = 'output/modeling/results'
+    figures_dir = 'output/modeling/figures_RF'
+    results_dir = 'output/modeling/results_RF'
     os.makedirs(figures_dir, exist_ok=True)
     os.makedirs(results_dir, exist_ok=True)
 
